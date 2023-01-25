@@ -21,6 +21,11 @@ public class CxController {
         return "user is: " + System.getProperty("user.name");
     }
 
+    @GetMapping("v2/authed/getUserName") // require auth
+    public String getUserName() {
+        return "user is: " + System.getProperty("user.name");
+    }
+
     @GetMapping("v2/authed/getIP") // require auth
     public String getIP() throws UnknownHostException {
         return Inet4Address.getLocalHost().getHostAddress();
