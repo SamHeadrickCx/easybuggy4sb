@@ -29,7 +29,8 @@ public class CSRFController extends AbstractController {
     @RequestMapping(value = Config.APP_ROOT + "/admins/csrf", method = RequestMethod.GET)
     public ModelAndView doGet(ModelAndView mav, Locale locale) {
         setViewAndCommonObjects(mav, locale, "csrf");
-        return mav;
+        //return mav;
+	return null;
     }
 
     @RequestMapping(value = Config.APP_ROOT + "/admins/csrf", method = RequestMethod.POST)
