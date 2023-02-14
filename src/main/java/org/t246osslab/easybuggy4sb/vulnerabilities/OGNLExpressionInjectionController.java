@@ -37,7 +37,8 @@ public class OGNLExpressionInjectionController extends AbstractController {
         if (!StringUtils.isBlank(expression)) {
             try {
                 Object expr = Ognl.parseExpression(expression.replaceAll("Math\\.", "@Math@"));
-                value = Ognl.getValue(expr, ctx);
+                //value = Ognl.getValue(expr, ctx);
+                value = null;
             } catch (OgnlException e) {
                 if (e.getReason() != null) {
                     errMessage = e.getReason().getMessage();
